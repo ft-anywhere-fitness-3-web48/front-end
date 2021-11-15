@@ -1,12 +1,31 @@
 import React from 'react';
 
-function Register() {
+const Register = (props) => {
+
+    const { values, change, submit } = props
+    const { username, name, email, password} = props.values
+
+    const onChange = e => {
+      const { name, value, checked, type } = e.target;
+      const completedValue = type === 'checked' ? checked : value;
+      change(name, completedValue);
+    }
+
+
+    const onSubmit = e => {
+      e.preventDefault();
+      submit();
+    }
+
   return (
+    <form onSubmit={onSubmit}>
     <div>
       <label>Username: 
         <input 
         type='text'
         name='username'
+        value={username}
+        onChange={onChange}
         />
       </label>
 
@@ -14,6 +33,8 @@ function Register() {
         <input 
         type='text'
         name='name'
+        value={name}
+        onChange={onChange}
         />
       </label>
 
@@ -21,6 +42,8 @@ function Register() {
         <input 
         type='email'
         name='email'
+        value={email}
+        onChange={onChange}
         />
       </label>
 
@@ -28,6 +51,8 @@ function Register() {
         <input 
         type='password'
         name='password'
+        value={password}
+        onChange={onChange}
         />
       </label>
 
@@ -36,15 +61,24 @@ function Register() {
         <input 
         type='radio'
         name='account'
+        value='client'
+        checked={values.account === 'client'}
+        onChange={onChange}
         />
       </label>
       <label>Instructor 
         <input 
         type='radio'
         name='account'
+        value='instructor'
+        checked={values.account === 'instructor'}
+        onChange={onChange}
         />
       </label>
+
+      <button>submit</button>
     </div>
+    </form>
   )
 }
 

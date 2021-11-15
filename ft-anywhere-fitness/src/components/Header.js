@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Register from './Register';
 
 
-function Header(props) {
+function Header (props) {
+
+  const [form, setForm] = useState([]);
+  const [formValues, setFormValues] = useState({ username: '',
+    name: '',
+    email: '',
+    password: '',
+    account: '', });
+  
+    const updatedForm = (name, value) => {
+      setFormValues({ ...formValues, [name]: value})
+    }
+
+    const submitedForm = () => {
+      setForm([formValues, ...form]);
+      setFormValues({ 
+        username: '',
+      name: '',
+      email: '',
+      password: '',
+      account: '', 
+    })};
+
     return (
       
         <div> 
@@ -15,7 +37,11 @@ function Header(props) {
           <Routes>
           <Route exact path='/' />
 
-          <Route path='/register' element={<Register />} />
+          <Route path='/register' element={<Register 
+          values={formValues}
+          change={updatedForm}
+          submit={submitedForm}
+          />} />
           </Routes>
         </div>
         

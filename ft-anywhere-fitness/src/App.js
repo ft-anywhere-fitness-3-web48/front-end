@@ -16,12 +16,12 @@ function App() {
       <Header />
         <div>
           <div className="header">
-            <NavLink exact activeClassName="active" to="/">Search</NavLink>
+            <NavLink exact activeClassName="active" to="/search">Search</NavLink>
             <NavLink activeClassName="active" to="/login">Login</NavLink><small></small>
           </div>
           <div className="content">
             <Routes>
-              <Route exact path="/" element={<Search/>} />
+              <Route exact path="/search" element={<Search/>} />
               <Route path="/login" element={<Login/>} />
              
             </Routes>

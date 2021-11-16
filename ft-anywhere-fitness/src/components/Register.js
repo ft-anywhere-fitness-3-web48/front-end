@@ -2,7 +2,7 @@ import React from 'react';
 
 const Register = (props) => {
 
-    const { values, change, submit } = props
+    const { values, change, submit, error } = props
     const { username, name, email, password} = props.values
 
     const onChange = e => {
@@ -20,6 +20,7 @@ const Register = (props) => {
   return (
     <form onSubmit={onSubmit}>
     <div>
+      <div>{error.username}</div>
       <label>Username: 
         <input 
         type='text'
@@ -29,6 +30,7 @@ const Register = (props) => {
         />
       </label>
 
+      <div>{error.name}</div>
       <label>Name:
         <input 
         type='text'
@@ -38,6 +40,7 @@ const Register = (props) => {
         />
       </label>
 
+      <div>{error.email}</div>
       <label>Email:
         <input 
         type='email'
@@ -47,6 +50,7 @@ const Register = (props) => {
         />
       </label>
 
+      <div>{error.password}</div>
       <label>Password:
         <input 
         type='password'
@@ -57,6 +61,7 @@ const Register = (props) => {
       </label>
 
       <h3>Account Type</h3>
+      <div>{error.account}</div>
       <label>Client
         <input 
         type='radio'

@@ -3,7 +3,7 @@ import React from 'react';
 function Search() {
   return (
     <div>
-      Welcome!
+      This is Search!
     </div>
   );
 }

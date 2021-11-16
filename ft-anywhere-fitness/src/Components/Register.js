@@ -1,15 +1,9 @@
 import React from 'react';
  
-function Register(props) {
- 
-  // handle click event of logout button
-  const handleLogout = () => {    
-    props.history.push('/login');
-  }
- 
+function Register() {
   return (
     <div>
-      <input type="button" onClick={handleLogout} value="Logout" />
+      This is Register!
     </div>
   );
 }

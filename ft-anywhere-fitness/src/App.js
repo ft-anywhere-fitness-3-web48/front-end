@@ -32,8 +32,11 @@ function App() {
           </div>
           <div className='details'>
           <h2>Get to know about Us!</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi excepturi ipsa mollitia, quaerat aut dolor eos debitis architecto nam officia, quisquam laudantium impedit officiis fugit nihil ipsam molestiae? Sed, perspiciatis.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi excepturi ipsa mollitia, quaerat aut dolor eos debitis architecto nam officia, quisquam laudantium impedit officiis fugit nihil ipsam molestiae? Sed, perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, distinctio natus, sapiente minus saepe sed error fuga dolore deleniti explicabo quos dolores dolor, possimus officia ullam in iusto dolorum aliquid.</p>
           </div> 
+          <div className='gym-image'>
+            <p>Our Latest Gym Room!</p>
+          </div>
           <div className='bottom'>
       <Footer />
       </div>

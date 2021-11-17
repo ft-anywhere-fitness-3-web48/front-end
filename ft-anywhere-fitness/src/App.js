@@ -17,9 +17,9 @@ function App() {
       <BrowserRouter>
         <div>
           <div className="header">
-            <NavLink exact activeClassName="active" to="/">Search</NavLink>
-            <NavLink activeClassName="active" to="/register">Register</NavLink><small></small>
-            <NavLink activeClassName="active" to="/login">Login</NavLink><small></small>
+            <NavLink exact activeClassName="active" to="/">Search for a class</NavLink>
+            <NavLink activeClassName="active" to="/register">Register</NavLink>
+            <NavLink activeClassName="active" to="/login">Login</NavLink>
           </div>
           <div className="content">
             <Routes>

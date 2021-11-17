@@ -24,7 +24,7 @@ function Header (props) {
       password: '',
       });
   
-    const updatedForm = (name, value) => {
+    const onChange = (name, value) => {
       validate(name, value)
       setFormValues({ ...formValues, [name]: value})
     }
@@ -36,16 +36,14 @@ function Header (props) {
       .catch(err => setFormErrors ({...formErrors, [name]: err.errors[0]}))
     }
 
-    const submittedForm = () => {
+    const onSubmit = () => {
       axios.post('https://fitness-anywhere-3.herokuapp.com/auth/register', formValues)
       .then(res => {
-        console.log(res);
         setAccount([res.data, ...account]);
       }) 
       .catch(err => {
         console.log(err);
       })
-      // .finally(() => setFormValues(formValues));
     };
 
     return (
@@ -60,8 +58,8 @@ function Header (props) {
           <Route exact path='/' />
           <Route path='/register' element={<Register 
           values={formValues}
-          change={updatedForm}
-          submit={submittedForm}
+          change={onChange}
+          submit={onSubmit}
           error={formErrors}
           />} />
           {account.map(acc => {console.log(acc)})}

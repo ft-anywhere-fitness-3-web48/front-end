@@ -37,8 +37,9 @@ function Header (props) {
     }
 
     const submittedForm = () => {
-      axios.post('https://fitness-anywhere-3.herokuapp.com/auth/register', {username: '', password: '', role_id: ''})
+      axios.post('https://fitness-anywhere-3.herokuapp.com/auth/register', formValues)
       .then(res => {
+        console.log(res);
         setAccount([res.data, ...account]);
       }) 
       .catch(err => {
@@ -63,12 +64,7 @@ function Header (props) {
           submit={submittedForm}
           error={formErrors}
           />} />
-          {account.map(acc => (
-            <div key={acc.id}>
-              {acc.username}
-              {acc.password}
-            </div>
-          ))}
+          {account.map(acc => {console.log(acc)})}
           </Routes>
         </div>
         

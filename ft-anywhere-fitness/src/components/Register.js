@@ -1,4 +1,5 @@
 import React from 'react';
+import './Register.css';
 
 const Register = (props) => {
 
@@ -19,8 +20,9 @@ const Register = (props) => {
 
   return (
     <form onSubmit={onSubmit}>
-    <div>
+    <div className='register-form'>
       <div>{error.username}</div>
+      <div className='labels'>
       <label>Username: 
         <input 
         type='text'
@@ -59,7 +61,8 @@ const Register = (props) => {
         onChange={onChange}
         />
       </label>
-
+      </div>
+      <div>
       <h3>Account Type</h3>
       <div>{error.account}</div>
       <label>Client
@@ -80,8 +83,8 @@ const Register = (props) => {
         onChange={onChange}
         />
       </label>
-
-      <button>submit</button>
+      </div>
+      <button>Join Now!</button>
     </div>
     </form>
   )

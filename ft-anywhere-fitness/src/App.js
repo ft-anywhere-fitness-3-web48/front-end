@@ -14,10 +14,9 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-      
       <Header />
-        <div>
-            <NavLink exact activeClassName="active" to="/search">Search</NavLink>
+        <div className='nav-links'>
+            <NavLink exact activeClassName="active" to="/search">Search For a Class</NavLink>
             <NavLink activeClassName="active" to="/login">Login</NavLink><small></small>
           </div>
           <div className="content">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import Register from './Register';
+import './Register.css';
 import axios from 'axios';
 import * as yup from 'yup';
 import schema from './registerSchema';
@@ -8,7 +9,7 @@ import schema from './registerSchema';
 
 function Header (props) {
 
-  // const [form, setForm] = useState({username: '', password: ''});
+  
   const [account, setAccount] = useState([]);
   const [formValues, setFormValues] = useState({ 
     username: '',
@@ -47,16 +48,14 @@ function Header (props) {
     };
 
     return (
-      
-        <div> 
+      <div> 
           <nav className='homepage'>
             <Link to='/'>Home</Link>
-            <Link className='register-link' to='/register'>Register</Link>
+            <Link className='register-link' to='/Register'>Register HERE!</Link>
           </nav>
-
           <Routes>
           <Route exact path='/' />
-          <Route path='/register' element={<Register 
+          <Route path='/Register' element={<Register 
           values={formValues}
           change={onChange}
           submit={onSubmit}
@@ -64,6 +63,7 @@ function Header (props) {
           />} />
           {account.map(acc => {console.log(acc)})}
           </Routes>
+        
         </div>
         
     )

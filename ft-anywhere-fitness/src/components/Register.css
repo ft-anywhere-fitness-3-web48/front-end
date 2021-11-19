@@ -1,0 +1,35 @@
+/* .register-form {
+  margin: 15%;
+  width: 100%;
+  padding: 30%;
+  border: 1px solid red;
+  border-radius: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.register-form button {
+  width: 25%;
+  padding: 2%;
+  margin-top: 15%;
+  border-radius: 10%;
+  background-color: #e63946;
+  color: white;
+}
+
+.register-form button:hover {
+  background-color: white;
+  color: #e5383b;
+}
+
+.register-link {
+  text-decoration: none;
+  color: #ba181b;
+}
+
+.register-link:hover {
+  color: #d90429;
+} */

@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import schema from './registerSchema';
 import './Register.css';
 
-const Register = (props) => {
+const Register = () => {
 
   const [account, setAccount] = useState({});
   const [formValues, setFormValues] = useState({

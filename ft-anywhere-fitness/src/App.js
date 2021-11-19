@@ -9,6 +9,7 @@ import './App.css';
 import Search from './components/Search';
 import Login from './components/Login';
 import Register from './components/Register';
+import Classes from './components/Classes';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route exact path='/register'>
             <Register />
+          </Route>
+          <Route exact path='/classes'>
+            <Classes />
           </Route>
           <Route exact path="/">
             <div className='filler'>

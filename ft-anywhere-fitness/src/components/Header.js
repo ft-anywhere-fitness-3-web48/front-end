@@ -10,6 +10,7 @@ function Header(props) {
       <nav className='homepage'>
         <Link to='/'>Home</Link>
         <Link className='register-link' to='/register'>Register HERE!</Link>
+        <Link className='classes' to='/classes'>Classes</Link>
       </nav>
 
 

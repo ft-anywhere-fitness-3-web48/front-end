@@ -38,9 +38,8 @@ const Register = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const corsFix = 'https://corsanywhere.herokuapp.com/';
     const payload = { ...formValues, role_id: formValues.account === 'instructor' ? 1 : 2 };
-    axios.post(corsFix + 'https://anywhere-fitness-back-end-2021.herokuapp.com/api/auth/register', payload)
+    axios.post('https://anywhere-fitness-back-end-2021.herokuapp.com/api/auth/register', payload)
       .then(res => {
         setAccount({ ...res.data, ...account });
       })

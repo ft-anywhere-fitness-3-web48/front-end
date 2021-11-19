@@ -24,8 +24,12 @@ function App() {
       </div>
       <div className="content">
         <Switch>
-          <Route exact path="/search" element={<Search />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/search">
+            <Search />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
           <Route exact path='/register'>
             <Register />
           </Route>

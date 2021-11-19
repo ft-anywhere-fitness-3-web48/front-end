@@ -61,7 +61,7 @@ function Header (props) {
           submit={onSubmit}
           error={formErrors}
           />} />
-          {account.map(acc => {console.log(acc)})}
+          {account.map(acc => (console.log(acc)))}
           </Routes>
         
         </div>

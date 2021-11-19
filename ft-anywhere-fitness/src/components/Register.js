@@ -51,6 +51,7 @@ const Register = () => {
   return (
     <form onSubmit={onSubmit}>
       <div className='register-form'>
+        <h2>Become a Part of Our Team!</h2>
         <div>{formErrors.username}</div>
         <div className='labels'>
           <label>Username:

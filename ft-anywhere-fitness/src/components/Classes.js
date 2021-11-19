@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Register.css';
 
 const Classes = (props) => {
 
@@ -22,13 +23,21 @@ const Classes = (props) => {
   }
 
   return (
-    <div>
+    <div className='classes-info'>
       <h3>List of Classes</h3>
-      {classType.map((sub) => (
-        <ol key={sub.id}>
-          <li>{sub.name}</li>
-        </ol>
-      ))}
+      <div className='flex'>
+        {classType.map((sub) => (
+          <div className='information'>
+            <ul key={sub.id}>
+              <li>Name: {sub.name}</li>
+              <li>Time: {sub['start_time']}</li>
+              <li>Intensity: {sub['intensity_level']}</li>
+              <li>Duration: {sub.duration}</li>
+              <li>Type of Activity: {sub['class_type_name']}</li>
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

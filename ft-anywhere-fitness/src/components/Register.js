@@ -22,7 +22,9 @@ const Register = (props) => {
     password: '',
   });
 
-  const onChange = (name, value) => {
+  const onChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
     validate(name, value);
     setFormValues({ ...formValues, [name]: value });
   };
@@ -36,7 +38,9 @@ const Register = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://fitness-anywhere-3.herokuapp.com/auth/register', formValues)
+    const corsFix = 'https://corsanywhere.herokuapp.com/';
+    const payload = { ...formValues, role_id: formValues.account === 'instructor' ? 1 : 2 };
+    axios.post(corsFix + 'https://anywhere-fitness-back-end-2021.herokuapp.com/api/auth/register', payload)
       .then(res => {
         setAccount({ ...res.data, ...account });
       })
@@ -44,8 +48,6 @@ const Register = (props) => {
         console.log(err);
       });
   };
-
-  console.log('here');
 
   return (
     <form onSubmit={onSubmit}>
